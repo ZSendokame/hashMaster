@@ -13,3 +13,6 @@ git clone https://github.com/ZSendokame/hashMaster; cd hashMaster; pip install -
 python hm.py -w wordlist.txt -a md5 -h b10a8db164e0754105b7a99be72e3fe5
                               |Algorithm
 ```
+
+Non-mandatory arguments:<br>
+-sa: Show supported algorithms by Hashlib.

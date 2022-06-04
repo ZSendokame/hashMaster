@@ -13,7 +13,7 @@ if not os.path.exists(arguing.get('-w')):
     exit('- Wordlist does not exists.')
 
 if not arguing.get('-a') in hashlib.algorithms_available or arguing.check('-sa'):
-    print('~ Supported algorithms.')
+    print('~ Supported algorithms:')
     exit(',\n'.join(algorithm for algorithm in hashlib.algorithms_available))
 
 # Main
