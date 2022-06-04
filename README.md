@@ -5,9 +5,6 @@ Hash master is an easy-to use Tool to crack hashes in a few seconds.
 ```sh
 # Git
 git clone https://github.com/ZSendokame/hashMaster; cd hashMaster; pip install -r requirements.txt
-
-# Pip
-pip install hashmaster
 ```
 
 # How to Use
