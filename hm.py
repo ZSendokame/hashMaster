@@ -2,7 +2,15 @@ import hashlib
 import arguing
 from timeit import timeit
 import os
-import hashUtil
+
+algorithms = {
+    'md5': hashlib.md5,
+    'sha1': hashlib.sha1,
+    'sha224': hashlib.sha224,
+    'sha256': hashlib.sha256,
+    'sha384': hashlib.sha384,
+    'sha512': hashlib.sha512
+}
 
 arguing.set('-h')
 arguing.set('-w')
@@ -14,14 +22,14 @@ if not os.path.exists(arguing.get('-w')):
 
 if not arguing.get('-a') in hashlib.algorithms_available or arguing.check('-sa'):
     print('~ Supported algorithms:')
-    exit(',\n'.join(algorithm for algorithm in hashlib.algorithms_available))
+    exit(',\n'.join(algorithm for algorithm in list(algorithms)))
 
 # Main
 with open(arguing.get('-w')) as file:
     file = file.read().strip().split('\n')
 
 start = timeit()
-algorithm = hashUtil.algorithms[arguing.get('-a')]
+algorithm = algorithms[arguing.get('-a')]
 print(f'~ Starting search for "{arguing.get("-h")}" in {arguing.get("-a")}.')
 
 for password in file:

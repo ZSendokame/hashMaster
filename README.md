@@ -9,10 +9,11 @@ git clone https://github.com/ZSendokame/hashMaster; cd hashMaster; pip install -
 
 # How to Use
 ```
-              |Wordlist              |Hash
-python hm.py -w wordlist.txt -a md5 -h b10a8db164e0754105b7a99be72e3fe5
+              |Wordlist              |Hash                               |Help
+python hm.py -w wordlist.txt -a md5 -h b10a8db164e0754105b7a99be72e3fe5 -sa
                               |Algorithm
 ```
 
-Non-mandatory arguments:<br>
--sa: Show supported algorithms by Hashlib.
+Optional parameters:<br>
+-sa: Show supported algorithms by Hashlib.<br>
+-a: MD5 (DEFAULT).
